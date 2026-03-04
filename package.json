@@ -1,0 +1,35 @@
+{
+  "name": "pod-deck",
+  "version": "1.0.0",
+  "description": "Virtual RODECaster soundboard for podcasters",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder",
+    "dev": "electron . --dev"
+  },
+  "dependencies": {
+    "electron-store": "^8.1.0"
+  },
+  "devDependencies": {
+    "electron": "^35.7.5",
+    "electron-builder": "^26.8.1"
+  },
+  "build": {
+    "appId": "com.poddeck.app",
+    "productName": "PodDeck",
+    "directories": {
+      "output": "dist"
+    },
+    "win": {
+      "target": ["portable"]
+    },
+    "mac": {
+      "target": "dmg",
+      "icon": "assets/icon.icns"
+    },
+    "linux": {
+      "target": "AppImage"
+    }
+  }
+}
